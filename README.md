@@ -13,7 +13,9 @@ Key Features:
 </li>
 <li>
 <b>API Endpoints:</b>
+<br>
 <img src='routes.png'>
+<br>
 <u>GET /api/category</u>: Retrieves all categories in XML format.<br>
 <u>GET /api/category/{id}</u>: Retrieves a specific category by its ID in XML format.<br>
 <u>POST /api/category</u>: Creates a new category. Accepts XML request payload with name and parent_id fields. Returns the created category in XML format.<br>

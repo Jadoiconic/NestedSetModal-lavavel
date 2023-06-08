@@ -13,11 +13,11 @@ Key Features:
 </li>
 <li>
 <b>API Endpoints:</b>
-GET /api/category: Retrieves all categories in XML format.<br>
-GET /api/category/{id}: Retrieves a specific category by its ID in XML format.<br>
-POST /api/category: Creates a new category. Accepts XML request payload with name and parent_id fields. Returns the created category in XML format.<br>
-PUT /category/{id}: Updates an existing category by its ID. Accepts XML request payload with name field. Returns the updated category in XML format.<br>
-DELETE /category/{id}: Deletes a category by its ID. Returns a success message in XML format.
+<u>GET /api/category</u>: Retrieves all categories in XML format.<br>
+<u>GET /api/category/{id}</u>: Retrieves a specific category by its ID in XML format.<br>
+<u>POST /api/category</u>: Creates a new category. Accepts XML request payload with name and parent_id fields. Returns the created category in XML format.<br>
+<u>PUT /category/{id}</u>: Updates an existing category by its ID. Accepts XML request payload with name field. Returns the updated category in XML format.<br>
+<u>DELETE /category/{id}</u>: Deletes a category by its ID. Returns a success message in XML format.
 </li>
 <li>
 XML Response Format: The API responses will be in XML format, ensuring compatibility with XML-based systems or clients.

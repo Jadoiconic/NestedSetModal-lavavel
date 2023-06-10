@@ -5,7 +5,7 @@ Project Description: RESTful API for Managing Categories in an Online Store
 
 The goal of this project is to create a RESTful API using Laravel for managing categories in an online store. The API will allow users to perform CRUD (Create, Read, Update, Delete) operations on categories using the nested set model. Categories will be stored in a MySQL database, and the API will return responses in XML format.
 
-Key Features:
+Key Features: 
 
 <ul>
 <li>

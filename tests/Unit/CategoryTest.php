@@ -19,7 +19,7 @@ class CategoryTest extends TestCase
      * @return void
      */
 
-    public function test_GetAllCategories()
+    public function test_getCategories()
     {
         $response = $this->get('/api/category');
         $response->assertStatus(200);
@@ -32,7 +32,7 @@ class CategoryTest extends TestCase
      *
      * @return void
      */
-    public function test_GetSingleCategoryById()
+    public function test_getCategoryWithId()
     {
         $category = Category::create([
             'name' => 'sampleTestingCategory'
@@ -47,14 +47,19 @@ class CategoryTest extends TestCase
      *
      * @return void
      */
-    public function test_createNewCategory()
+    public function test_addCategory()
     {
         $category = Category::make([
             'name' => 'parentCategory'
         ]);
+        $category2 = Category::make([
+            'name' => 'parentCategory'
+        ]);
+
         $category->save();
         $this->get('/api/category/' . $category->id);
         self::assertTrue($category->count() == 1);
+        self::assertFalse($category2->exists);
     }
 
     /**
@@ -62,7 +67,7 @@ class CategoryTest extends TestCase
      *
      * @return void
      */
-    public function test_updatingCategory()
+    public function test_modifyCategory()
     {
         $oldCategory = Category::make([
             'name' => 'parentCategory'
@@ -85,7 +90,7 @@ class CategoryTest extends TestCase
      *
      * @return void
      */
-    public function test_deleteCategory(){
+    public function test_removeCategory(){
         $category = Category::create(['name'=>'sample category']);
 
         $response = $this->delete('/api/category/'.$category->id);

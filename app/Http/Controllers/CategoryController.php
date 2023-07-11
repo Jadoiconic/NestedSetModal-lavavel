@@ -14,7 +14,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::latest()->get()->toTree();
-        return response()->xml(['category' => $categories->toArray()]);
+        return response(['category' => $categories->toArray()]);
     }
 
 
